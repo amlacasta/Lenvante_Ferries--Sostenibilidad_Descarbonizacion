@@ -1,0 +1,5 @@
+fuel,mj_kg,eur_mj,co2_g_mj,ch4_g_mj,n2o_g_mj,wtw_g_mj,source_type
+MGO,42.7,0.018,74.0,0.01,0.004,91.16,Illustrative model assumption; not certified
+LNG,49.0,0.015,56.0,0.65,0.002,89.0,Illustrative model assumption; not certified
+BIO_MGO,42.7,0.033,0.0,0.01,0.004,32.0,Illustrative model assumption; not certified
+BIO_LNG,49.0,0.028,0.0,0.65,0.002,30.0,Illustrative model assumption; not certified

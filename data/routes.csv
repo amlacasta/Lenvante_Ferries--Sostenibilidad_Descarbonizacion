@@ -1,0 +1,9 @@
+route_id,route,distance_nm,depart_eu,arrive_eu,ops_available,ops_reliability,ets_scope,fueleu_scope,ops_eur_mj
+DNI-IBZ,Dénia – Ibiza,62,1,1,1,0.91,1.0,1.0,0.024
+DNI-FOR,Dénia – Formentera,56,1,1,0,0.87,1.0,1.0,0.024
+DNI-PMI,Dénia – Mallorca,119,1,1,1,0.9,1.0,1.0,0.024
+VLC-PMI,Valencia – Palma,135,1,1,1,0.93,1.0,1.0,0.024
+BCN-IBZ,Barcelona – Ibiza,156,1,1,1,0.91,1.0,1.0,0.024
+BCN-PMI,Barcelona – Palma,112,1,1,1,0.95,1.0,1.0,0.024
+ALG-TNG,Algeciras – Tánger,19,1,0,0,0.89,0.5,0.5,0.024
+VLC-ORN,Valencia – Orán,166,1,0,0,0.93,0.5,0.5,0.024

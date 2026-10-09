@@ -51,11 +51,11 @@ una opción más económica con menores emisiones.
 
 | Ruta | Contenido |
 | --- | --- |
-| `data/` | `voyages_2026_synthetic.csv`, rutas, buques y factores energéticos asumidos |
+| `data/` | Viajes sintéticos comprimidos en `voyages_2026_synthetic.csv.gz`, rutas, buques y factores energéticos asumidos |
 | `notebooks/01…07*.ipynb` | Siete cuadernos documentados, ejecutados, con salidas guardadas |
 | `src/model.py` | Contabilidad, agregación y optimizador MIP compartidos |
 | `src/build_project.py` | Generador determinista de datos, KPIs, escenarios, optimización y notebooks |
-| `outputs/` | Tabla viaje × carbono × finanzas, KPIs, escenarios y decisiones óptimas |
+| `outputs/` | KPIs, escenarios y decisiones óptimas; la tabla detallada viaje × carbono × finanzas se regenera |
 | `site/index.html` | Dashboard dark **autónomo**, con datos incrustados; abrir en navegador |
 | `site/dashboard.template.html` | Plantilla del dashboard para regenerar desde `data.json` |
 | `docs/` | Fuentes, fórmulas, contratos de integración y publicación posterior |
@@ -65,12 +65,15 @@ una opción más económica con menores emisiones.
 1. Abrir `site/index.html` con un navegador actualizado. No necesita servidor,
    clave ni conexión de datos. Las pestañas contienen Executive Overview,
    Fleet, Routes, Energy Transition, EU ETS & FuelEU y Decarbonization Simulator.
-2. Para recalcular todo, crear un entorno con Python 3.11 o posterior, instalar
-   `pip install -r requirements.txt` y ejecutar desde la raíz
-   `python src/build_project.py`. Los siete `.ipynb` se ejecutan y guardan de
+2. Para restaurar el CSV de viajes publicado, ejecutar
+   `python src/restore_data.py`. Para recalcular todo, crear un entorno con
+   Python 3.11 o posterior, instalar `pip install -r requirements.txt` y ejecutar
+   desde la raíz `python src/build_project.py`. Este último comando regenera
+   también `outputs/voyage_carbon_finance.csv`. Los siete `.ipynb` se ejecutan y guardan de
    nuevo durante ese comando; también se pueden abrir individualmente en
    Jupyter o Google Colab **después de subir la carpeta completa**.
-3. `python checks/verify.py` comprueba conciliación, restricciones y salidas.
+3. `python checks/verify.py` comprueba conciliación, restricciones y salidas
+   después de la regeneración.
    Los resultados no son números aleatorios nuevos: la semilla está fijada en
    `20260923`.
 

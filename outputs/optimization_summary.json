@@ -1,0 +1,12 @@
+{
+  "solver_status": 0,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "baseline_ttw_t": 40355.73092494059,
+  "optimized_ttw_t": 34953.92551855439,
+  "baseline_cost_eur": 41808105.562094115,
+  "optimized_cost_eur": 40576118.000078656,
+  "savings_eur": 1231987.562015459,
+  "cap_reduction": 0.12,
+  "groups": 10,
+  "candidates": 540
+}
